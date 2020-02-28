@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaos System</title>
     <style>
-        body{
+        body {
             background-color: rgb(56, 136, 228);
         }
-        .container{
-        margin: auto;
-        height: 600px;
-        width: 700px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+        .container {
+            margin: 80px auto;
+            margin-bottom: 0;
+            height: 600px;
+            width: 1000px;
+            display: flex;
+            align-items: flex-start;
         }
-        #canvas{
+
+        .control-container {
+            margin: 0 15px;
+        }
+
+        #canvas {
             background: rgb(255, 255, 255);
         }
-        h1{
+
+        h1 {
             text-align: center;
             color: rgb(255, 255, 255);
             margin: 10px;
         }
-        h3{
+
+        h3 {
             color: rgb(255, 255, 255);
         }
-        .select{
+
+        .select {
             display: flex;
             justify-content: space-between;
 
         }
-        .select button{
+
+        .select button {
             cursor: pointer;
             border: none;
             width: 150px;
@@ -43,13 +54,16 @@
             transition: 0.3s;
             background-color: rgb(252, 164, 113);
         }
-        .select button:hover{
+
+        .select button:hover {
             background-color: rgb(250, 252, 113);
         }
-        .select button+button{
+
+        .select button+button {
             margin-left: 10px;
         }
-        #dot{
+
+        #dot {
             cursor: pointer;
             margin: 15px 0;
             padding: 5px 10px;
@@ -58,25 +72,40 @@
             border-radius: 30px;
             transition: 0.3s;
         }
-        #dot:hover{
+
+        #dot:hover {
             background: rgb(3, 182, 98);
             color: white;
         }
+        .formula-box h2{
+            font-style: italic;
+            color: rgb(255, 255, 255);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1 id="title">Tinkerbell Chaos System</h1>
-        <div class="select">
-            <button id="tinkerbell-btn">Tinkerbell Map</button>
-            <button id="duffing-btn">Duffing Map</button>
-            <button id="henon-btn">Henon Map</button>
+        <div class="control-container">
+            <h1 id="title">Tinkerbell Chaos System</h1>
+            <div class="select">
+                <button id="tinkerbell-btn">Tinkerbell Map</button>
+                <button id="duffing-btn">Duffing Map</button>
+                <button id="henon-btn">Henon Map</button>
+            </div>
+            <button id="dot">Start Drawing</button>
+            <div class="formula-box">
+                <h2>x<sub>n+1</sub> = x<sub>n</sub><sup style="margin-left: -8px;">2</sup> - y<sub>n</sub><sup style="margin-left: -8px;">2</sup> + 0.9x<sub>n</sub> -
+                    0.6013y<sub>n</sub></h2>
+                <h2>y<sub>n+1</sub> = 2x<sub>n</sub>y<sub>n</sub> + 2x<sub>n</sub> + 0.5y<sub>n</sub></h2>
+            </div>
         </div>
-        <button id="dot">Start Drawing</button>
+
         <canvas id="canvas" width="500" height="500"></canvas>
     </div>
     <script src="./chaosSystem.js"></script>
     <script src="./variable.js"></script>
     <script src="./index.js"></script>
 </body>
+
 </html>

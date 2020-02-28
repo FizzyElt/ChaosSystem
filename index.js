@@ -37,6 +37,7 @@ tinkerbellBtn.addEventListener('click', function () {
     selectSystem = new TinkerBell()
     count = 0
     title.textContent = "Tinkerbell Chaos System"
+    formula.innerHTML=tinkerbellFormula
 })
 duffingBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
@@ -44,6 +45,7 @@ duffingBtn.addEventListener('click', function () {
     selectSystem = new Duffing()
     count = 0
     title.textContent = "Duffing Chaos System"
+    formula.innerHTML=duffingFormula
 })
 henonBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
@@ -51,6 +53,7 @@ henonBtn.addEventListener('click', function () {
     selectSystem = new Henon()
     count = 0
     title.textContent = "Henon Chaos System"
+    formula.innerHTML=henonFormula
 })
 drawBtn.addEventListener('click', function () {
     if (count === 0) {
