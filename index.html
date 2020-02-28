@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos System</title>
+    <style>
+        body{
+            background-color: rgb(56, 136, 228);
+        }
+        .container{
+        margin: auto;
+        height: 600px;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        #canvas{
+            background: rgb(255, 255, 255);
+        }
+        h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+        h3{
+            color: rgb(255, 255, 255);
+        }
+        .select{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .select button{
+            cursor: pointer;
+            border: none;
+            width: 150px;
+            height: 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            background-color: rgb(252, 164, 113);
+        }
+        .select button:hover{
+            background-color: rgb(250, 252, 113);
+        }
+        .select button+button{
+            margin-left: 10px;
+        }
+        #dot{
+            cursor: pointer;
+            margin: 15px 0;
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        #dot:hover{
+            background: rgb(3, 182, 98);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Tinkerbell Chaos System</h1>
+        <div class="select">
+            <button id="tinkerbell-btn">Tinkerbell Map</button>
+            <button id="duffing-btn">Duffing Map</button>
+            <button id="henon-btn">Henon Map</button>
+        </div>
+        <button id="dot">Start Drawing</button>
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+    <script src="./chaosSystem.js"></script>
+    <script src="./variable.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
