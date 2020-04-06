@@ -43,7 +43,8 @@ tinkerbellBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
     refresh()
     selectSystem = new TinkerBell()
-    count = 0
+    count = 1
+    counter.textContent=`${count}`
     title.textContent = "Tinkerbell Chaos System"
     formula.innerHTML=tinkerbellFormula
 })
@@ -51,7 +52,8 @@ duffingBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
     refresh()
     selectSystem = new Duffing()
-    count = 0
+    count = 1
+    counter.textContent=`${count}`
     title.textContent = "Duffing Chaos System"
     formula.innerHTML=duffingFormula
 })
@@ -59,33 +61,35 @@ henonBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
     refresh()
     selectSystem = new Henon()
-    count = 0
+    count = 1
+    counter.textContent=`${count}`
     title.textContent = "Henon Chaos System"
     formula.innerHTML=henonFormula
 })
 
 //開始畫點
 drawBtn.addEventListener('click', function () {
-    if (count === 0) {
+    if (count === 1) {
         drawInterval = setInterval(() => {
             if (count < maxDot) {
                 drawing(selectSystem)
                 count++
+                counter.textContent=`${count}`
             } else {
                 clearInterval(drawInterval)
-                alert("完成")
             }
         }, 1);
     } else if (count >= maxDot) {
         refresh()
-        count = 0
+        count = 1
+        counter.textContent=`${count}`
         drawInterval = setInterval(() => {
             if (count < maxDot) {
                 drawing(selectSystem)
                 count++
+                counter.textContent=`${count}`
             } else {
                 clearInterval(drawInterval)
-                alert("完成")
             }
         }, 1);
     }

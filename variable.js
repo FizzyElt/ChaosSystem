@@ -1,15 +1,16 @@
 var cv = document.getElementById('canvas')
 var ctx = cv.getContext('2d')
 var drawBtn = document.getElementById('dot')
+var counter=document.getElementById('counter')
 var tinkerbellBtn=document.getElementById('tinkerbell-btn')
 var duffingBtn=document.getElementById('duffing-btn')
 var henonBtn=document.getElementById('henon-btn')
 var title=document.getElementById('title')
 var formula=document.querySelector('.formula-box')
-let count = 0
+let count = 1
 
 //最大畫點次數
-const maxDot = 4000
+const maxDot = 3000
 
 
 let drawInterval
