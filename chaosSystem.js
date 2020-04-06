@@ -4,6 +4,8 @@ class ChaosSystem {
         this.y = y
     }
 }
+
+
 class TinkerBell extends ChaosSystem {
     constructor(x, y) {
         super(x, y)
@@ -19,7 +21,9 @@ class TinkerBell extends ChaosSystem {
     draw() {
         drawDot(350 + this.x * 250, 150 - this.y * 180)
     }
-}
+} 
+
+
 class Duffing extends ChaosSystem {
     constructor(x, y) {
         super(x, y)
@@ -36,6 +40,8 @@ class Duffing extends ChaosSystem {
         drawDot(250 + this.x * 140, 250 - this.y * 130)
     }
 }
+
+
 class Henon extends ChaosSystem {
     constructor(x, y) {
         super(x, y)

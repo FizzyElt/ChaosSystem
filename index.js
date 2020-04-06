@@ -1,8 +1,12 @@
-function refresh() { //刷新
+
+//刷新
+function refresh() { 
     ctx.clearRect(0, 0, 500, 500)
     drawLine()
 }
-function drawLine() { //繪製 x y 軸
+
+//繪製 x y 軸
+function drawLine() { 
 
     //x軸
     ctx.beginPath();
@@ -19,18 +23,22 @@ function drawLine() { //繪製 x y 軸
     ctx.fill()
 
 }
-function drawDot(x, y) {   //畫點
+
+//畫點
+function drawDot(x, y) {   
     ctx.beginPath()
     ctx.arc(x, y, 2, 0, 2 * Math.PI, true)
     ctx.fillStyle = "rgb(255, 39, 39)"
     ctx.fill()
 }
-function drawing(chaosCallback) { //繪製圖形
+
+//繪製圖形
+function drawing(chaosCallback) { 
     chaosCallback.draw()
     chaosCallback.nextStatus()
 }
 
-
+//混沌系統選取
 tinkerbellBtn.addEventListener('click', function () {
     clearInterval(drawInterval)
     refresh()
@@ -55,6 +63,8 @@ henonBtn.addEventListener('click', function () {
     title.textContent = "Henon Chaos System"
     formula.innerHTML=henonFormula
 })
+
+//開始畫點
 drawBtn.addEventListener('click', function () {
     if (count === 0) {
         drawInterval = setInterval(() => {

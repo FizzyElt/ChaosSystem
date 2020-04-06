@@ -7,9 +7,18 @@ var henonBtn=document.getElementById('henon-btn')
 var title=document.getElementById('title')
 var formula=document.querySelector('.formula-box')
 let count = 0
+
+//最大畫點次數
 const maxDot = 4000
+
+
 let drawInterval
+
+//當前混沌系統
 let selectSystem=new TinkerBell()
+
+
+//運算式
 const tinkerbellFormula=`
 <h2>x<sub>n+1</sub> = x<sub>n</sub><sup style="margin-left: -8px;">2</sup> - y<sub>n</sub><sup style="margin-left: -8px;">2</sup> + 0.9x<sub>n</sub> -
 0.6013y<sub>n</sub></h2>
